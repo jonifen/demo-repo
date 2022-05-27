@@ -38,7 +38,7 @@ export const Clock = () => {
         <div style={separatorStyles}>:</div>
         <div style={numberStyles}>{padNumber(now.getSeconds())}</div>
       </div>
-      <div>
+      <div style={{ paddingTop: "1rem" }}>
         {padNumber(now.getDate())}/{padNumber(now.getMonth() + 1)}/
         {now.getFullYear()}
       </div>
