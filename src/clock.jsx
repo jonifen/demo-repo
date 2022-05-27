@@ -1,6 +1,16 @@
 import React, { useMemo } from "react";
 
 export const Clock = () => {
+  const numberStyles = {
+    "font-weight": "bold",
+    color: "#008788",
+    "font-size": "2rem",
+  };
+
+  const separatorStyles = {
+    "padding-top": "0.5rem",
+  };
+
   const now = new Date();
   const padNumber = (num) => {
     const padded = `00${num}`;
@@ -9,12 +19,12 @@ export const Clock = () => {
   };
 
   return (
-    <div>
-      <span style={{ "font-weight": "bold" }}>{padNumber(now.getHours())}</span>
-      <span>:</span>
-      <span style={{ "font-weight": "bold" }}>{padNumber(now.getMinutes())}</span>
-      <span>:</span>
-      <span style={{ "font-weight": "bold" }}>{padNumber(now.getSeconds())}</span>
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      <div style={numberStyles}>{padNumber(now.getHours())}</div>
+      <div style={separatorStyles}>:</div>
+      <div style={numberStyles}>{padNumber(now.getMinutes())}</div>
+      <div style={separatorStyles}>:</div>
+      <div style={numberStyles}>{padNumber(now.getSeconds())}</div>
     </div>
   );
 };
