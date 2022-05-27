@@ -30,12 +30,18 @@ export const Clock = () => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "row" }}>
-      <div style={numberStyles}>{padNumber(now.getHours())}</div>
-      <div style={separatorStyles}>:</div>
-      <div style={numberStyles}>{padNumber(now.getMinutes())}</div>
-      <div style={separatorStyles}>:</div>
-      <div style={numberStyles}>{padNumber(now.getSeconds())}</div>
+    <div>
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={numberStyles}>{padNumber(now.getHours())}</div>
+        <div style={separatorStyles}>:</div>
+        <div style={numberStyles}>{padNumber(now.getMinutes())}</div>
+        <div style={separatorStyles}>:</div>
+        <div style={numberStyles}>{padNumber(now.getSeconds())}</div>
+      </div>
+      <div>
+        {padNumber(now.getDate())}/{padNumber(now.getMonth() + 1)}/
+        {now.getFullYear()}
+      </div>
     </div>
   );
 };
