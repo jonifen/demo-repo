@@ -10,11 +10,11 @@ export const Clock = () => {
 
   return (
     <div>
-      <span>{padNumber(now.getHours())}</span>
-      <span style={{ "font-weight": "bold" }}>:</span>
-      <span>{padNumber(now.getMinutes())}</span>
-      <span style={{ "font-weight": "bold" }}>:</span>
-      <span>{padNumber(now.getSeconds())}</span>
+      <span style={{ "font-weight": "bold" }}>{padNumber(now.getHours())}</span>
+      <span>:</span>
+      <span style={{ "font-weight": "bold" }}>{padNumber(now.getMinutes())}</span>
+      <span>:</span>
+      <span style={{ "font-weight": "bold" }}>{padNumber(now.getSeconds())}</span>
     </div>
   );
 };
