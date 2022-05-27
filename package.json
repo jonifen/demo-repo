@@ -1,0 +1,21 @@
+{
+  "name": "demo-repo",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "source": "public/index.html",
+  "repository": "git@github.com:jonifen/demo-repo.git",
+  "author": "Jon Cain <jonifen@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build",
+    "dev": "parcel --port 9000"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
